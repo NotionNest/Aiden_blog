@@ -2,6 +2,13 @@
 // https://github.com/tailwindlabs/tailwindcss-intellisense/issues/663#issuecomment-1316788128
 
 module.exports = {
+  darkMode: 'class',
+  variants: {
+    extend: {
+      textOpacity: ['dark'],
+      backgroundColor: ['dark'],
+    },
+  },
   content: [],
   theme: {
     extend: {
@@ -10,5 +17,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

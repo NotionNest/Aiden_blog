@@ -19,7 +19,7 @@ const formatedData = computed(() => {
 </script>
 
 <template>
-  <main class="container max-w-5xl mx-auto text-zinc-600">
+  <main class="container max-w-5xl mx-auto">
     <ArchiveHero />
     <div class="space-y-5 my-5">
       <template v-for="post in formatedData" :key="post.title">

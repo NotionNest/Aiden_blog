@@ -28,11 +28,11 @@ const data = computed<BlogPost>(() => {
         :alt="data.alt || ''"
         class="m-auto rounded-2xl shadow-lg h-52 md:h-96 w-4/5 content-center object-cover"
       >
-      <p class="text-xs sm:text-sm my-3 max-w-3xl mx-auto text-center text-zinc-600">
+      <p class="text-xs sm:text-sm my-3 max-w-3xl mx-auto text-center">
         {{ data.description }}
       </p>
       <div class="flex w-full justify-center text-xs md:text-base my-8">
-        <div class="md:flex text-black content-center gap-8 text-xs sm:text-sm">
+        <div class="md:flex content-center gap-8 text-xs sm:text-sm">
           <div class="flex items-center font-semibold">
             <LogoDate />
             <p>{{ data.date || '' }}</p>

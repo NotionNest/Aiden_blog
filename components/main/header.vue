@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { computed } from 'vue'
-
+const colorMode = useColorMode()
 const route = useRoute()
 const path = computed(() => route.fullPath.replace('/', ''))
+function changeColorMode() {
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+}
 </script>
 
 <template>
-  <div class="py-5 border-b font-semibold">
+  <div class="flex py-5 border-b font-semibold">
     <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline">
       <ul class="flex items-baseline space-x-5">
         <li class="text-lg sm:text-2xl font-blod">
@@ -34,5 +35,39 @@ const path = computed(() => route.fullPath.replace('/', ''))
         </li>
       </ul>
     </div>
+    <div>
+      <div id="darkModeToggle" class="dark-mode-toggle" :class="{ dark: colorMode.preference === 'dark' }" @click="changeColorMode">
+        <button class="toggle-button" />
+      </div>
+    </div>
   </div>
 </template>
+
+<style>
+.dark-mode-toggle {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 28px;
+  right: 10px;
+  background-color: #ddd;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle.dark .toggle-button {
+  transform: translateX(20px);
+  background-color: #333;
+}
+</style>

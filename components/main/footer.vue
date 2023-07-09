@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { computed } from 'vue'
-
 const route = useRoute()
 const path = computed(() => route.fullPath.replace('/', ''))
 </script>
 
 <template>
-  <div class="py-5 border-t mt-5 text-zinc-700">
+  <div class="py-5 border-t mt-5">
     <div class="px-6 container max-w-5xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3">
         <FooterSite v-if="path === 'about'" />

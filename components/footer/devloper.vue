@@ -1,12 +1,12 @@
 <template>
   <div>
-    <p class="text-black text-2xl py-1 font-semibold">
+    <p class="text-2xl py-1 font-semibold">
       Devloper
     </p>
     <p class="py-2">
       Hi! I'm aiden, a software engineer.
     </p>
-    <div class="my-3 space-x-3 pb-3">
+    <div class="my-3 space-x-3 pb-3 dark:text-black">
       <NuxtLink
         to="https://github.com/nurRiyad"
         target="_blank"

@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="group border m-2 rounded-2xl overflow-hidden shadow-sm text-zinc-700">
+  <div class="group border m-2 rounded-2xl overflow-hidden shadow-sm">
     <p>{{ path }}</p>
     <NuxtLink :to="path" class="grid grid-cols-1 sm:grid-cols-10 gap-1">
       <div class="sm:col-span-3">
@@ -33,13 +33,13 @@ withDefaults(defineProps<Props>(), {
         >
       </div>
       <div class="sm:col-span-7 p-5">
-        <h2 class="text-xl font-semibold text-black pb-1 group-hover:text-sky-700">
+        <h2 class="text-xl font-semibold  pb-1 group-hover:text-sky-700 dark:group-hover:text-[#00dc82]">
           {{ title }}
         </h2>
         <p class="text-ellipsis line-clamp-2">
           {{ description }}
         </p>
-        <div class="text-black text-sm pt-2 pb-1 md:flex md:space-x-6">
+        <div class="text-sm pt-2 pb-1 md:flex md:space-x-6">
           <div class="flex items-center">
             <LogoDate />
             {{ date }}
@@ -51,7 +51,7 @@ withDefaults(defineProps<Props>(), {
             </template>
           </div>
         </div>
-        <div class="flex group-hover:underline text-sky-700 items-center pt-2">
+        <div class="flex group-hover:underline text-sky-700 dark:text-[#00dc82] items-center pt-2">
           <p>Read More</p>
           <LogoArrow />
         </div>

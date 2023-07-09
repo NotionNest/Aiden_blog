@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-black text-base font-semibold">
+    <p class="text-base font-semibold">
       Connect With Me
     </p>
     <p>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { makeFirstCharUpper } from '@/utils/helper'
-
 const topics = [
   'javascript',
   'typescript',
@@ -20,9 +18,9 @@ const topics = [
 </script>
 
 <template>
-  <div class="container max-w-5xl mx-auto text-zinc-600">
+  <div class="container max-w-5xl mx-auto">
     <CategoryHero />
-    <div class="flex flex-wrap px-6 mt-12 gap-3">
+    <div class="flex flex-wrap px-6 mt-12 h-full gap-3">
       <template v-for="topic in topics" :key="topic">
         <CategoryCard :title="makeFirstCharUpper(topic)" />
       </template>
