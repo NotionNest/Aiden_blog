@@ -1,0 +1,5 @@
+{
+  "extends": "@antfu",
+  // 关掉保存文件后， <div class="app">内容</div>  分行显示
+  //"vue/singleline-html-element-content-newline" : "off"
+}
