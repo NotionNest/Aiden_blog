@@ -24,6 +24,20 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.0.1"
+    "@tiptap/core": "^2.0.4",
+    "@tiptap/extension-bubble-menu": "^2.0.4",
+    "@tiptap/extension-floating-menu": "^2.0.4",
+    "@tiptap/extension-focus": "^2.0.4",
+    "@tiptap/extension-history": "^2.0.4",
+    "@tiptap/extension-placeholder": "^2.0.4",
+    "@tiptap/extension-underline": "^2.0.4",
+    "@tiptap/pm": "^2.0.4",
+    "@tiptap/starter-kit": "^2.0.4",
+    "@tiptap/suggestion": "^2.0.4",
+    "@tiptap/vue-3": "^2.0.4",
+    "@vercel/analytics": "^1.0.1",
+    "@vueuse/core": "^10.2.1",
+    "@vueuse/nuxt": "^10.2.1",
+    "sass": "^1.64.2"
   }
 }

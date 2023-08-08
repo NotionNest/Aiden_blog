@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/content', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/content', '@nuxtjs/color-mode', '@vueuse/nuxt'],
   colorMode: {
     classSuffix: '',
   },
@@ -15,5 +15,5 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  plugins: ['~/plugins/vercel.ts', { src: '~/plugins/vercel.ts', mode: 'client' }],
+  plugins: [],
 })

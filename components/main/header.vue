@@ -3,13 +3,14 @@ const colorMode = useColorMode()
 const route = useRoute()
 const path = computed(() => route.fullPath.replace('/', ''))
 function changeColorMode() {
-  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+  // colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+  colorMode.preference = 'light'
 }
 </script>
 
 <template>
-  <div class="flex py-5 border-b font-semibold">
-    <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline">
+  <div class="flex py-5 font-semibold border-b">
+    <div class="container flex items-baseline justify-between max-w-5xl px-6 mx-auto">
       <ul class="flex items-baseline space-x-5">
         <li class="text-lg sm:text-2xl font-blod">
           <NuxtLink to="/">
@@ -17,7 +18,7 @@ function changeColorMode() {
           </NuxtLink>
         </li>
       </ul>
-      <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
+      <ul class="flex items-center space-x-3 text-sm sm:space-x-6 sm:text-lg">
         <li>
           <NuxtLink to="/blogs" :class="{ underline: path === 'blogs' }">
             Blogs
